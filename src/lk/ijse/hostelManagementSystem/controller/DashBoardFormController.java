@@ -23,8 +23,7 @@ public class DashBoardFormController {
         @FXML
         private JFXButton btnCustomer;
 
-        @FXML
-        private JFXButton btnStaff;
+
 
         @FXML
         private JFXButton btnBorrow;
@@ -43,14 +42,13 @@ public class DashBoardFormController {
 
         boolean bookManagementCL = true;
         boolean customerManagementCL = true;
-        boolean employeeManageCL = true;
         boolean borrowCL = true;
         boolean attendanceCL = true;
         boolean reportsCL = true;
 
         @FXML
         void btnGo1OnAction(ActionEvent event) throws IOException {
-                setUi("/lk/ijse/librarydb/view/bookManagement");
+                setUi("/lk/ijse/hostelManagementSystem/view/RoomForm");
                 loadCL();
                 if (bookManagementCL) {
                         btnBooks.setStyle("-fx-background-color: #1620A1");
@@ -62,7 +60,7 @@ public class DashBoardFormController {
 
         @FXML
         void btnGo3OnAction(ActionEvent event) throws IOException {
-                setUi("/lk/ijse/librarydb/view/customerManagement");
+                setUi("/lk/ijse/hostelManagementSystem/view/StudentForm");
                 loadCL();
                 if (customerManagementCL) {
                         btnCustomer.setStyle("-fx-background-color: #1620A1");
@@ -72,21 +70,10 @@ public class DashBoardFormController {
         }
 
 
-        @FXML
-        void btnGo4OnActions(ActionEvent event) throws IOException {
-                setUi("/lk/ijse/librarydb/view/employeeManagement");
-                loadCL();
-                if (employeeManageCL) {
-                        btnStaff.setStyle("-fx-background-color: #1620A1");
-                        employeeManageCL = false;
-                }
-                employeeManageCL = true;
-        }
-
 
         @FXML
         void btnGo5OnAction(ActionEvent event) throws IOException {
-                setUi("/lk/ijse/librarydb/view/borrowReturnManage");
+                setUi("/lk/ijse/hostelManagementSystem/view/PaymentForm");
                 loadCL();
                 if (borrowCL) {
                         btnBorrow.setStyle("-fx-background-color: #1620A1");
@@ -126,7 +113,7 @@ public class DashBoardFormController {
         @FXML
         void goBackOnAction(ActionEvent event) throws IOException {
                 Stage stage = (Stage) pane.getScene().getWindow();
-                stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/lk/ijse/librarydb/view/LoginForm.fxml"))));
+                stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/lk/ijse/hostelManagementSystem/view/UserLoginForm.fxml"))));
                 stage.centerOnScreen();
                 Notifications notificationsBuilder = Notifications.create()
                         .title("Logging out!")
@@ -149,10 +136,6 @@ public class DashBoardFormController {
                 bookManagementCL = true;
                 btnCustomer.setStyle("-fx-background-color: #05071F");
                 customerManagementCL = true;
-                btnStaff.setStyle("-fx-background-color: #05071F");
-                employeeManageCL = true;
-                btnStaff.setStyle("-fx-background-color: #05071F");
-                employeeManageCL = true;
                 btnBorrow.setStyle("-fx-background-color: #05071F");
                 borrowCL = true;
                 btnAttendance.setStyle("-fx-background-color: #05071F");

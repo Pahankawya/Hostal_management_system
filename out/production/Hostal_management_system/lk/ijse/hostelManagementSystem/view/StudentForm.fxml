@@ -13,6 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+
 <AnchorPane fx:id="pane" prefHeight="692.0" prefWidth="799.0" style="-fx-background-color: #02030a;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.controller.RoomFormController">
     <children>
         <JFXTextField fx:id="txtTitle" layoutX="221.0" layoutY="168.0" onAction="#btnTitleOnAction" onKeyReleased="#txttitleOnAction" promptText="Title here!" styleClass="button3" stylesheets="@../assests/style/style.css" unFocusColor="#e7e5e5" />
@@ -33,7 +34,8 @@
                         <Image url="@../assests/images/OIP-removebg-preview.png" />
                     </image>
                 </ImageView>
-            </graphic></JFXButton>
+            </graphic>
+        </JFXButton>
         <VBox layoutX="50.0" layoutY="117.0" prefHeight="297.0" prefWidth="135.0" stylesheets="@../assests/style/style.css">
             <children>
                 <Label prefHeight="49.0" prefWidth="134.0" text="Book Id:" textFill="#e7e5e5">
@@ -44,7 +46,8 @@
                 <Label prefHeight="49.0" prefWidth="134.0" text="Book Title:" textFill="#e7e5e5">
                     <font>
                         <Font name="Baskerville Old Face" size="18.0" />
-                    </font></Label>
+                    </font>
+                </Label>
                 <Label prefHeight="49.0" prefWidth="134.0" text="Book Price:" textFill="#e7e5e5">
                     <font>
                         <Font name="Baskerville Old Face" size="18.0" />
@@ -72,7 +75,7 @@
             </columns>
         </TableView>
         <TextField fx:id="txtID1" layoutX="514.0" layoutY="149.0" onAction="#searchOnAction" promptText="Search ID here!" />
-        <Label layoutX="281.0" layoutY="33.0" prefHeight="54.0" prefWidth="308.0" text="Manage Rooms" textFill="#e7e5e5">
+        <Label layoutX="281.0" layoutY="33.0" prefHeight="54.0" prefWidth="308.0" text="Manage Books" textFill="#e7e5e5">
             <font>
                 <Font name="Baskerville Old Face" size="45.0" />
             </font>

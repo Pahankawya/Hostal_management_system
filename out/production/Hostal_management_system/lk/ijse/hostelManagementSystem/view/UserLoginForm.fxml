@@ -39,7 +39,7 @@
                     </font>
                 </TextField>
                 <CheckBox fx:id="checkBox" layoutX="38.0" layoutY="215.0" mnemonicParsing="false" onAction="#changeVisibility" text="Show Password" textFill="#a89b9b" />
-                <Button layoutX="58.0" layoutY="242.0" mnemonicParsing="false" onAction="#gofoward1" prefHeight="44.0" prefWidth="133.0" style="-fx-background-radius: 15; -fx-background-color: #132550;" text="Login" textFill="#c9baba">
+                <Button fx:id="btnlogin" layoutX="58.0" layoutY="242.0" mnemonicParsing="false" onAction="#gofoward1" prefHeight="44.0" prefWidth="133.0" style="-fx-background-radius: 15; -fx-background-color: #132550;" text="Login" textFill="#c9baba">
                     <font>
                         <Font name="Arial" size="21.0" />
                     </font>
@@ -47,7 +47,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Button>
-                <Button layoutX="83.0" layoutY="306.0" mnemonicParsing="false" onAction="#goBack" prefHeight="37.0" prefWidth="88.0" style="-fx-background-radius: 15; -fx-background-color: #000000;" text="Back" textFill="#cdbcbc">
+                <Button fx:id="btnback" layoutX="83.0" layoutY="306.0" mnemonicParsing="false" onAction="#goBack" prefHeight="37.0" prefWidth="88.0" style="-fx-background-radius: 15; -fx-background-color: #000000;" text="Close" textFill="#cdbcbc">
                     <font>
                         <Font size="15.0" />
                     </font>
