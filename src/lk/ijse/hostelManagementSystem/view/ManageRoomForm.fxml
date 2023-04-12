@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="692.0" prefWidth="799.0" style="-fx-background-color: #02030a;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.controller.ManageRoomFormController">
+    <children>
+        <JFXTextField fx:id="txtType" layoutX="221.0" layoutY="168.0" onAction="#btnRoomTypeOnAction" onKeyReleased="#txttitleOnAction" promptText="Type here!" styleClass="button3" stylesheets="@assests/style/style.css" unFocusColor="#e7e5e5" />
+        <JFXTextField fx:id="txtKeyMoney" layoutX="221.0" layoutY="217.0" onAction="#btnKeyMoneyOnAction" onKeyReleased="#txtPriceOnAction" promptText="Type here!" styleClass="button3" stylesheets="@assests/style/style.css" unFocusColor="#e7e5e5" />
+        <JFXTextField fx:id="txtQty" layoutX="221.0" layoutY="270.0" onAction="#btnQtyOnAction" onKeyReleased="#txtTypeOnAction" promptText="Type here!" styleClass="button3" stylesheets="@assests/style/style.css" unFocusColor="#e7e5e5" />
+        <JFXButton fx:id="btnAddonactionId" buttonType="RAISED" layoutX="607.0" layoutY="229.0" onAction="#btnAddOnAction" prefHeight="31.0" prefWidth="125.0" stylesheets="@assests/style/style.css" text="ADD" />
+        <JFXButton buttonType="RAISED" layoutX="607.0" layoutY="282.0" onAction="#btnUpdateOnAction" prefHeight="31.0" prefWidth="125.0" stylesheets="@assests/style/style.css" text="UPDATE" />
+        <JFXButton buttonType="RAISED" layoutX="607.0" layoutY="331.0" onAction="#btnDeleteOnAction" prefHeight="31.0" prefWidth="125.0" styleClass="button1" stylesheets="@assests/style/style.css" text="DELETE" />
+        <JFXTextField fx:id="txtID" layoutX="221.0" layoutY="126.0" onAction="#btnIdOnAction" onKeyReleased="#txtIdOnAction" promptText="Id here!" styleClass="button3" stylesheets="@assests/style/style.css" unFocusColor="#e7e5e5" />
+        <JFXButton fx:id="btnsearch" buttonType="RAISED" layoutX="706.0" layoutY="149.0" onAction="#btnSearchOnAction" prefHeight="31.0" prefWidth="1.0" stylesheets="@assests/style/style.css" text="search">
+            <font>
+                <Font size="1.0" />
+            </font>
+            <graphic>
+                <ImageView fitHeight="26.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@assests/images/OIP-removebg-preview.png" />
+                    </image>
+                </ImageView>
+            </graphic></JFXButton>
+        <VBox layoutX="50.0" layoutY="117.0" prefHeight="297.0" prefWidth="135.0" stylesheets="@assests/style/style.css">
+            <children>
+                <Label prefHeight="49.0" prefWidth="134.0" text="Room Id:" textFill="#e7e5e5">
+                    <font>
+                        <Font name="Baskerville Old Face" size="18.0" />
+                    </font>
+                </Label>
+                <Label prefHeight="49.0" prefWidth="134.0" text="Room Type:" textFill="#e7e5e5">
+                    <font>
+                        <Font name="Baskerville Old Face" size="18.0" />
+                    </font></Label>
+                <Label prefHeight="49.0" prefWidth="134.0" text="Key Money:" textFill="#e7e5e5">
+                    <font>
+                        <Font name="Baskerville Old Face" size="18.0" />
+                    </font>
+                </Label>
+                <Label prefHeight="49.0" prefWidth="134.0" text="Qty:" textFill="#e7e5e5">
+                    <font>
+                        <Font name="Baskerville Old Face" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <TableView fx:id="tbl" layoutX="47.0" layoutY="426.0" prefHeight="229.0" prefWidth="685.0" style="-fx-background-color: #05071F;" styleClass="button" stylesheets="@assests/style/style.css">
+            <columns>
+                <TableColumn fx:id="tblId" prefWidth="138.0" text="Room ID" />
+                <TableColumn fx:id="tblType" prefWidth="177.0" text="Room Type" />
+                <TableColumn fx:id="tblKeyMoney" prefWidth="163.0" text="Key Money" />
+                <TableColumn fx:id="tblQty" prefWidth="206.0" text="QTY" />
+            </columns>
+        </TableView>
+        <TextField fx:id="txtID1" layoutX="514.0" layoutY="149.0" onAction="#searchOnAction" promptText="Search ID here!" />
+        <Label layoutX="281.0" layoutY="33.0" prefHeight="54.0" prefWidth="308.0" text="Manage Rooms" textFill="#e7e5e5">
+            <font>
+                <Font name="Baskerville Old Face" size="45.0" />
+            </font>
+            <effect>
+                <Glow level="0.41" />
+            </effect>
+        </Label>
+        <Label fx:id="lblUserNameWarning" layoutX="365.0" layoutY="130.0" textFill="RED" />
+        <Label fx:id="lblUserNameWarning1" layoutX="364.0" layoutY="172.0" textFill="RED" />
+        <Label fx:id="lblUserNameWarning2" layoutX="363.0" layoutY="221.0" textFill="RED" />
+        <Label fx:id="lblUserNameWarning3" layoutX="364.0" layoutY="274.0" textFill="RED" />
+        <Label fx:id="lblWarning4" layoutX="364.0" layoutY="328.0" textFill="RED" />
+    </children>
+</AnchorPane>
