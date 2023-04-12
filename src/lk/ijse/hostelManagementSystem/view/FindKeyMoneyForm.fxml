@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="692.0" prefWidth="799.0" style="-fx-background-color: #02030a;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.controller.FindKeyMoneyFormController">
+    <children>
+        <JFXButton fx:id="btnsearch" buttonType="RAISED" layoutX="694.0" layoutY="149.0" onAction="#btnSearchOnAction" prefHeight="41.0" prefWidth="45.0" stylesheets="@assests/style/style.css" text="search">
+            <font>
+                <Font size="1.0" />
+            </font>
+            <graphic>
+                <ImageView fitHeight="34.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@assests/images/OIP-removebg-preview.png" />
+                    </image>
+                </ImageView>
+            </graphic></JFXButton>
+        <TableView fx:id="tbl" layoutX="22.0" layoutY="280.0" prefHeight="375.0" prefWidth="753.0" style="-fx-background-color: #05071F;" styleClass="button" stylesheets="@assests/style/style.css">
+            <columns>
+                <TableColumn fx:id="tblReserveID" prefWidth="101.0" text="Reserve ID" />
+                <TableColumn fx:id="tblStudendID" prefWidth="118.0" text="Student ID" />
+                <TableColumn fx:id="tblRoomID" prefWidth="109.0" text="Room ID" />
+                <TableColumn fx:id="tblDate" prefWidth="104.0" text="Date" />
+                <TableColumn fx:id="tblKeyMoney" prefWidth="128.0" text="Key Money" />
+            <TableColumn fx:id="tblAdvanced" prefWidth="112.0" text="Advanced" />
+            <TableColumn fx:id="tblStatus" text="Status" />
+            </columns>
+        </TableView>
+        <TextField fx:id="txtID1" layoutX="514.0" layoutY="149.0" onAction="#searchOnAction" prefHeight="41.0" prefWidth="159.0" promptText="Search here!" />
+        <Label layoutX="286.0" layoutY="34.0" prefHeight="54.0" prefWidth="308.0" text="Find Key-Money" textFill="#e7e5e5">
+            <font>
+                <Font name="Baskerville Old Face" size="45.0" />
+            </font>
+            <effect>
+                <Glow level="0.41" />
+            </effect>
+        </Label>
+        <Label fx:id="lblUserNameWarning" layoutX="365.0" layoutY="130.0" textFill="RED" />
+        <Label fx:id="lblUserNameWarning1" layoutX="364.0" layoutY="172.0" textFill="RED" />
+        <Label fx:id="lblUserNameWarning2" layoutX="363.0" layoutY="221.0" textFill="RED" />
+        <Label fx:id="lblUserNameWarning3" layoutX="364.0" layoutY="274.0" textFill="RED" />
+        <Label fx:id="lblWarning4" layoutX="364.0" layoutY="328.0" textFill="RED" />
+    </children>
+</AnchorPane>

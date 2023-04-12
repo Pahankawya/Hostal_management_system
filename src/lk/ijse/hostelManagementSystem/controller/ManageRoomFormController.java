@@ -11,28 +11,25 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 
-public class PaymentFormController {
+public class ManageRoomFormController {
 
     @FXML
     private AnchorPane pane;
 
     @FXML
-    private JFXTextField txtTitle;
-
-    @FXML
-    private JFXTextField txtPrice;
-
-    @FXML
     private JFXTextField txtType;
+
+    @FXML
+    private JFXTextField txtKeyMoney;
+
+    @FXML
+    private JFXTextField txtQty;
 
     @FXML
     private JFXButton btnAddonactionId;
 
     @FXML
     private JFXTextField txtID;
-
-    @FXML
-    private JFXTextField txtQty;
 
     @FXML
     private JFXButton btnsearch;
@@ -44,13 +41,10 @@ public class PaymentFormController {
     private TableColumn<?, ?> tblId;
 
     @FXML
-    private TableColumn<?, ?> tblTitle;
-
-    @FXML
-    private TableColumn<?, ?> tblPrice;
-
-    @FXML
     private TableColumn<?, ?> tblType;
+
+    @FXML
+    private TableColumn<?, ?> tblKeyMoney;
 
     @FXML
     private TableColumn<?, ?> tblQty;
@@ -89,7 +83,7 @@ public class PaymentFormController {
     }
 
     @FXML
-    void btnPriceOnAction(ActionEvent event) {
+    void btnKeyMoneyOnAction(ActionEvent event) {
 
     }
 
@@ -99,17 +93,12 @@ public class PaymentFormController {
     }
 
     @FXML
+    void btnRoomTypeOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
     void btnSearchOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void btnTitleOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void btnTypeOnAction(ActionEvent event) {
 
     }
 
@@ -130,11 +119,6 @@ public class PaymentFormController {
 
     @FXML
     void txtPriceOnAction(KeyEvent event) {
-
-    }
-
-    @FXML
-    void txtQtyOnReleased(KeyEvent event) {
 
     }
 

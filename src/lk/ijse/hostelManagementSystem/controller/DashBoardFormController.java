@@ -15,58 +15,47 @@ import org.controlsfx.control.Notifications;
 import java.io.IOException;
 
 public class DashBoardFormController {
+        @FXML
+        private JFXButton btnUser;
 
         @FXML
-        private JFXButton btnBooks;
-
-
-        @FXML
-        private JFXButton btnCustomer;
-
-
+        private JFXButton btnStudent;
 
         @FXML
-        private JFXButton btnBorrow;
-
-
+        private JFXButton btnRooms;
 
         @FXML
-        private JFXButton btnAttendance;
-
-
-        @FXML
-        private JFXButton btnReports;
+        private JFXButton btnKeymoney;
 
         @FXML
         private AnchorPane pane;
 
-        boolean bookManagementCL = true;
-        boolean customerManagementCL = true;
-        boolean borrowCL = true;
-        boolean attendanceCL = true;
-        boolean reportsCL = true;
+        boolean StudentManagement = true;
+        boolean RoomManagement = true;
+        boolean keyMoney = true;
+        boolean UserManagement = true;
 
         @FXML
         void btnGo1OnAction(ActionEvent event) throws IOException {
-                setUi("/lk/ijse/hostelManagementSystem/view/RoomForm");
+                setUi("/lk/ijse/hostelManagementSystem/view/ManageStudentForm");
                 loadCL();
-                if (bookManagementCL) {
-                        btnBooks.setStyle("-fx-background-color: #1620A1");
-                        bookManagementCL = false;
+                if (StudentManagement) {
+                        btnStudent.setStyle("-fx-background-color: #1620A1");
+                        StudentManagement = false;
                 }
-                bookManagementCL = true;
+                StudentManagement = true;
         }
 
 
         @FXML
         void btnGo3OnAction(ActionEvent event) throws IOException {
-                setUi("/lk/ijse/hostelManagementSystem/view/StudentForm");
+                setUi("/lk/ijse/hostelManagementSystem/view/ManageRoomForm");
                 loadCL();
-                if (customerManagementCL) {
-                        btnCustomer.setStyle("-fx-background-color: #1620A1");
-                        customerManagementCL = false;
+                if (RoomManagement) {
+                        btnRooms.setStyle("-fx-background-color: #1620A1");
+                        RoomManagement = false;
                 }
-                customerManagementCL = true;
+                RoomManagement = true;
         }
 
 
@@ -75,37 +64,27 @@ public class DashBoardFormController {
         void btnGo5OnAction(ActionEvent event) throws IOException {
                 setUi("/lk/ijse/hostelManagementSystem/view/PaymentForm");
                 loadCL();
-                if (borrowCL) {
-                        btnBorrow.setStyle("-fx-background-color: #1620A1");
-                        borrowCL = false;
+                if (keyMoney) {
+                        btnKeymoney.setStyle("-fx-background-color: #1620A1");
+                        keyMoney = false;
                 }
-                borrowCL = true;
+                keyMoney = true;
         }
 
 
-        @FXML
-        void btnGo6OnAction(ActionEvent event) throws IOException {
-                setUi("/lk/ijse/librarydb/view/attendanceManagement");
-                loadCL();
-                if (attendanceCL) {
-                        btnAttendance.setStyle("-fx-background-color: #1620A1");
-                        attendanceCL = false;
-                }
-                attendanceCL = true;
 
-        }
 
 
 
         @FXML
         void btngo8OnAction(ActionEvent event) throws IOException {
-                setUi("/lk/ijse/librarydb/view/reportForm");
+                setUi("/lk/ijse/hostelManagementSystem/view/ManageUserForm");
                 loadCL();
-                if (reportsCL) {
-                        btnReports.setStyle("-fx-background-color: #1620A1");
-                        reportsCL = false;
+                if (UserManagement) {
+                        btnUser.setStyle("-fx-background-color: #1620A1");
+                        UserManagement = false;
                 }
-                reportsCL = true;
+                UserManagement = true;
 
         }
 
@@ -132,16 +111,14 @@ public class DashBoardFormController {
         }
 
         public void loadCL() {
-                btnBooks.setStyle("-fx-background-color: #05071F");
-                bookManagementCL = true;
-                btnCustomer.setStyle("-fx-background-color: #05071F");
-                customerManagementCL = true;
-                btnBorrow.setStyle("-fx-background-color: #05071F");
-                borrowCL = true;
-                btnAttendance.setStyle("-fx-background-color: #05071F");
-                attendanceCL = true;
-                btnReports.setStyle("-fx-background-color: #05071F");
-                reportsCL = true;
+                btnStudent.setStyle("-fx-background-color: #05071F");
+                StudentManagement = true;
+                btnRooms.setStyle("-fx-background-color: #05071F");
+                RoomManagement = true;
+                btnKeymoney.setStyle("-fx-background-color: #05071F");
+                keyMoney = true;
+                btnUser.setStyle("-fx-background-color: #05071F");
+                UserManagement = true;
 
         }
 }

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="692.0" prefWidth="799.0" style="-fx-background-color: #02030a;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.controller.ManageUserFormController">
+    <children>
+        <JFXTextField fx:id="txtuserName" layoutX="221.0" layoutY="168.0" onAction="#btnUsernameOnAction" onKeyReleased="#txttitleOnAction" promptText="user name here!" styleClass="button3" stylesheets="@assests/style/style.css" unFocusColor="#e7e5e5" />
+        <JFXTextField fx:id="txtPassword" layoutX="221.0" layoutY="217.0" onAction="#btnPasswordOnAction" onKeyReleased="#txtPriceOnAction" promptText="password here!" styleClass="button3" stylesheets="@assests/style/style.css" unFocusColor="#e7e5e5" />
+        <JFXTextField fx:id="txtUserAddress" layoutX="221.0" layoutY="270.0" onAction="#btnUserAddressOnAction" onKeyReleased="#txtTypeOnAction" promptText="address here!" styleClass="button3" stylesheets="@assests/style/style.css" unFocusColor="#e7e5e5" />
+        <JFXButton fx:id="btnAddonactionId" buttonType="RAISED" layoutX="607.0" layoutY="229.0" onAction="#btnAddOnAction" prefHeight="31.0" prefWidth="125.0" stylesheets="@assests/style/style.css" text="ADD NEW" />
+        <JFXButton buttonType="RAISED" layoutX="607.0" layoutY="282.0" onAction="#btnUpdateOnAction" prefHeight="31.0" prefWidth="125.0" stylesheets="@assests/style/style.css" text="UPDATE" />
+        <JFXButton buttonType="RAISED" layoutX="607.0" layoutY="331.0" onAction="#btnDeleteOnAction" prefHeight="31.0" prefWidth="125.0" styleClass="button1" stylesheets="@assests/style/style.css" text="DELETE" />
+        <JFXTextField fx:id="txtID" layoutX="221.0" layoutY="126.0" onAction="#btnIdOnAction" onKeyReleased="#txtIdOnAction" promptText="user id here!" styleClass="button3" stylesheets="@assests/style/style.css" unFocusColor="#e7e5e5" />
+        <JFXTextField fx:id="txtContact" layoutX="221.0" layoutY="324.0" onAction="#btnContactOnAction" onKeyReleased="#txtQtyOnReleased" promptText="contact no here!" styleClass="button3" stylesheets="@assests/style/style.css" unFocusColor="#e7e5e5" />
+        <VBox layoutX="50.0" layoutY="117.0" prefHeight="297.0" prefWidth="135.0" stylesheets="@assests/style/style.css">
+            <children>
+                <Label prefHeight="49.0" prefWidth="134.0" text="User Id:" textFill="#e7e5e5">
+                    <font>
+                        <Font name="Baskerville Old Face" size="18.0" />
+                    </font>
+                </Label>
+                <Label prefHeight="49.0" prefWidth="134.0" text="User Name:" textFill="#e7e5e5">
+                    <font>
+                        <Font name="Baskerville Old Face" size="18.0" />
+                    </font></Label>
+                <Label prefHeight="49.0" prefWidth="134.0" text="Password:" textFill="#e7e5e5">
+                    <font>
+                        <Font name="Baskerville Old Face" size="18.0" />
+                    </font>
+                </Label>
+                <Label prefHeight="49.0" prefWidth="134.0" text="User Address:" textFill="#e7e5e5">
+                    <font>
+                        <Font name="Baskerville Old Face" size="18.0" />
+                    </font>
+                </Label>
+                <Label prefHeight="49.0" prefWidth="134.0" text="Contact No:" textFill="#e7e5e5">
+                    <font>
+                        <Font name="Baskerville Old Face" size="18.0" />
+                    </font>
+                </Label>
+            <Label layoutX="10.0" layoutY="206.0" prefHeight="49.0" prefWidth="134.0" text="Gender:" textFill="#e7e5e5">
+               <font>
+                  <Font name="Baskerville Old Face" size="18.0" />
+               </font>
+            </Label>
+            </children>
+        </VBox>
+        <TableView fx:id="tbl" layoutX="47.0" layoutY="426.0" prefHeight="229.0" prefWidth="711.0" style="-fx-background-color: #05071F;" styleClass="button" stylesheets="@assests/style/style.css">
+            <columns>
+                <TableColumn fx:id="tblId" text="User ID" />
+                <TableColumn fx:id="tblname" prefWidth="128.0" text="User Name" />
+                <TableColumn fx:id="tblAddress" prefWidth="151.0" text="User Address" />
+                <TableColumn fx:id="tblContact" prefWidth="116.0" text="Contact No." />
+                <TableColumn fx:id="tblPassword" prefWidth="122.0" text="Password" />
+            <TableColumn fx:id="tblGender" prefWidth="113.0" text="Gender" />
+            </columns>
+        </TableView>
+        <Label layoutX="281.0" layoutY="33.0" prefHeight="54.0" prefWidth="308.0" text="Manage User" textFill="#e7e5e5">
+            <font>
+                <Font name="Baskerville Old Face" size="45.0" />
+            </font>
+            <effect>
+                <Glow level="0.41" />
+            </effect>
+        </Label>
+        <Label fx:id="lblUserNameWarning" layoutX="365.0" layoutY="130.0" textFill="RED" />
+        <Label fx:id="lblUserNameWarning1" layoutX="364.0" layoutY="172.0" textFill="RED" />
+        <Label fx:id="lblUserNameWarning2" layoutX="363.0" layoutY="221.0" textFill="RED" />
+        <Label fx:id="lblUserNameWarning3" layoutX="364.0" layoutY="274.0" textFill="RED" />
+        <Label fx:id="lblWarning4" layoutX="364.0" layoutY="328.0" textFill="RED" />
+      <JFXComboBox fx:id="cmbGender" layoutX="221.0" layoutY="372.0" prefHeight="25.0" prefWidth="135.0" />
+    </children>
+</AnchorPane>

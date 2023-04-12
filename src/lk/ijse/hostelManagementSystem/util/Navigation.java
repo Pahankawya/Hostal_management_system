@@ -20,15 +20,15 @@ public class Navigation {
         switch (route) {
             case ROOM:
                 window.setTitle("Room Form");
-                initUI("RoomForm.fxml");
+                initUI("ManageRoomForm.fxml");
                 break;
             case STUDENT:
                 window.setTitle("Student Form");
-                initUI("StudentForm.fxml");
+                initUI("ManageStudentForm.fxml");
                 break;
             case PAYMENT:
                 window.setTitle("Payment Dashboard");
-                initUI("PaymentForm.fxml");
+                initUI("FindKeyMoneyForm.fxml");
                 break;
             case CATEGORY:
                 window.setTitle("Category Form");
