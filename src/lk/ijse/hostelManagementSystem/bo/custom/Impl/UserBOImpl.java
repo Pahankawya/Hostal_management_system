@@ -49,7 +49,6 @@ public class UserBOImpl implements UserBO {
     public boolean existUser(String id) throws SQLException, ClassNotFoundException {
         return userDAO.exist(id);
     }
-}
 
 
 }
