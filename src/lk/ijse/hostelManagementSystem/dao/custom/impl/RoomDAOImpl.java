@@ -17,7 +17,7 @@ public class RoomDAOImpl implements RoomDAO {
         ArrayList<Room> allRoom;
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
-        Query query = session.createQuery("From Room");
+        Query query = session.createQuery("FROM Room");
         allRoom = (ArrayList<Room>) query.list();
         transaction.commit();
         session.close();
@@ -35,18 +35,19 @@ public class RoomDAOImpl implements RoomDAO {
     }
 
     @Override
-    public boolean update(Room room) throws SQLException, ClassNotFoundException{
+    public boolean update(Room room) throws SQLException, ClassNotFoundException {
+
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         session.update(room);
         transaction.commit();
         session.close();
         return true;
-
     }
 
     @Override
     public boolean delete(String id) throws SQLException, ClassNotFoundException {
+
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         Room room = session.get(Room.class, id);
@@ -54,27 +55,27 @@ public class RoomDAOImpl implements RoomDAO {
         transaction.commit();
         session.close();
         return true;
-
     }
 
     @Override
     public Room search(String id) throws SQLException, ClassNotFoundException {
+
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         Room room = session.get(Room.class, id);
         transaction.commit();
         session.close();
         return room;
-
     }
 
     @Override
     public boolean exist(String id) throws SQLException, ClassNotFoundException {
+
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         Query query = session.createQuery("SELECT room_id FROM Room WHERE room_id=:id");
         String id1 = (String) query.setParameter("id", id).uniqueResult();
-        if(id1 != null){
+        if (id1 != null) {
             return true;
         }
         transaction.commit();

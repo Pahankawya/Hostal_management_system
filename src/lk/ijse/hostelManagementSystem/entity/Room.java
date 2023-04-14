@@ -16,6 +16,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 public class Room {
+    @Id
     private String room_id;
     private String type;
     private String key_money;
