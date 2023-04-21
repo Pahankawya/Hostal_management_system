@@ -12,6 +12,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @Entity
 public class Login {
+
     @Id
     private String userID;
     private String name;
@@ -19,5 +20,4 @@ public class Login {
     private String contact_no;
     private String Password;
     private String gender;
-
 }

@@ -3,7 +3,9 @@ package lk.ijse.hostelManagementSystem.dao;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public interface CrudDAO <T, ID> extends SuperDAO{
+
+public interface CrudDAO <T, ID> extends SuperDAO {
+
     ArrayList<T> getAll() throws SQLException, ClassNotFoundException;
 
     boolean save(T t) throws SQLException, ClassNotFoundException;
@@ -15,5 +17,4 @@ public interface CrudDAO <T, ID> extends SuperDAO{
     T search(ID id) throws SQLException, ClassNotFoundException;
 
     boolean exist(ID id) throws SQLException, ClassNotFoundException;
-
-    }
+}

@@ -62,7 +62,7 @@ public class DashBoardFormController {
 
         @FXML
         void btnGo5OnAction(ActionEvent event) throws IOException {
-                setUi("/lk/ijse/hostelManagementSystem/view/PaymentForm");
+                setUi("/lk/ijse/hostelManagementSystem/view/FindKeyMoneyForm");
                 loadCL();
                 if (keyMoney) {
                         btnKeymoney.setStyle("-fx-background-color: #1620A1");

@@ -1,8 +1,6 @@
 package lk.ijse.hostelManagementSystem.dao.custom.impl;
 
 import lk.ijse.hostelManagementSystem.dao.custom.UserDAO;
-
-
 import lk.ijse.hostelManagementSystem.entity.Login;
 import lk.ijse.hostelManagementSystem.util.FactoryConfiguration;
 import org.hibernate.Session;
@@ -12,19 +10,20 @@ import org.hibernate.query.Query;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+
 public class UserDAOImpl implements UserDAO {
 
     @Override
     public ArrayList<Login> getAllUsers() throws SQLException, ClassNotFoundException {
 
-        ArrayList<Login> login;
+        ArrayList<Login> loging;
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         Query query = session.createQuery("FROM Login");
-        login = (ArrayList<Login>) query.list();
+        loging = (ArrayList<Login>) query.list();
         transaction.commit();
         session.close();
-        return login;
+        return loging;
     }
 
     @Override

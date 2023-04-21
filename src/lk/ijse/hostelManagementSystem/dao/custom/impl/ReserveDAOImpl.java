@@ -13,7 +13,8 @@ import java.util.ArrayList;
 public class ReserveDAOImpl implements ReserveDAO {
 
     @Override
-    public ArrayList<Reservation> getAll() throws SQLException, ClassNotFoundException{
+    public ArrayList<Reservation> getAll() throws SQLException, ClassNotFoundException {
+
         ArrayList<Reservation> allReserve = null;
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
@@ -24,31 +25,30 @@ public class ReserveDAOImpl implements ReserveDAO {
         return allReserve;
     }
 
-
     @Override
-    public boolean save (Reservation reservation)throws SQLException, ClassNotFoundException {
-    Session session = FactoryConfiguration.getInstance().getSession();
-    Transaction transaction = session.beginTransaction();
-    session.save(reservation);
-    transaction.commit();
-    session.close();
-    return true;
-
-}
-
-    @Override
-    public boolean update(Reservation reservation)throws SQLException, ClassNotFoundException{
+    public boolean save(Reservation reservation) throws SQLException, ClassNotFoundException {
 
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
+        session.save(reservation);
         transaction.commit();
         session.close();
         return true;
-
     }
 
     @Override
-    public boolean delete (String id)throws SQLException, ClassNotFoundException{
+    public boolean update(Reservation reservation) throws SQLException, ClassNotFoundException {
+
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        session.update(reservation);
+        transaction.commit();
+        session.close();
+        return true;
+    }
+
+    @Override
+    public boolean delete(String id) throws SQLException, ClassNotFoundException {
 
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
@@ -60,7 +60,8 @@ public class ReserveDAOImpl implements ReserveDAO {
     }
 
     @Override
-    public Reservation search(String id)throws SQLException, ClassNotFoundException{
+    public Reservation search(String id) throws SQLException, ClassNotFoundException {
+
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         Reservation reservation = session.get(Reservation.class, id);
@@ -68,13 +69,14 @@ public class ReserveDAOImpl implements ReserveDAO {
         session.close();
         return reservation;
     }
+
     @Override
-    public boolean existStudent(String id) throws SQLException, ClassNotFoundException{
+    public boolean existStudent(String id) throws SQLException, ClassNotFoundException {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         Query query = session.createQuery("SELECT student_id FROM Reservation WHERE student_id=:id");
-        String id1 = (String) query.setParameter("id", id).uniqueResult() ;
-        if(id1 != null){
+        String id1 = (String) query.setParameter("id", id).uniqueResult();
+        if (id1 != null) {
             return true;
         }
         transaction.commit();
@@ -83,12 +85,13 @@ public class ReserveDAOImpl implements ReserveDAO {
     }
 
     @Override
-    public boolean exist (String id) throws SQLException, ClassNotFoundException{
+    public boolean exist(String id) throws SQLException, ClassNotFoundException {
+
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         Query query = session.createQuery("SELECT res_id FROM Reservation WHERE res_id=:id");
         String id1 = (String) query.setParameter("id", id).uniqueResult();
-        if(id1 !=null){
+        if (id1 != null) {
             return true;
         }
         transaction.commit();
@@ -97,7 +100,8 @@ public class ReserveDAOImpl implements ReserveDAO {
     }
 
     @Override
-    public String generateNewId() throws SQLException, ClassNotFoundException{
+    public String generateNewId() throws SQLException, ClassNotFoundException {
+
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         Query query = session.createSQLQuery("SELECT res_id FROM Reservation ORDER BY res_id DESC LIMIT 1");
@@ -111,8 +115,3 @@ public class ReserveDAOImpl implements ReserveDAO {
         return "REG-001";
     }
 }
-
-
-
-
-

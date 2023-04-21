@@ -10,13 +10,16 @@ import org.hibernate.query.Query;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+
 public class StudentDAOImpl implements StudentDAO {
+
     @Override
     public ArrayList<Student> getAll() throws SQLException, ClassNotFoundException {
+
         ArrayList<Student> allStudents;
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
-        Query query = session.createQuery("FROM Student");
+        Query query = session.createQuery("FROM Student ");
         allStudents = (ArrayList<Student>) query.list();
         transaction.commit();
         session.close();
@@ -25,17 +28,18 @@ public class StudentDAOImpl implements StudentDAO {
 
     @Override
     public boolean save(Student student) throws SQLException, ClassNotFoundException {
+
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         session.save(student);
         transaction.commit();
         session.close();
         return true;
-
     }
 
     @Override
     public boolean update(Student student) throws SQLException, ClassNotFoundException {
+
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         session.update(student);
@@ -45,7 +49,8 @@ public class StudentDAOImpl implements StudentDAO {
     }
 
     @Override
-    public boolean delete (String id ) throws SQLException, ClassNotFoundException {
+    public boolean delete(String id) throws SQLException, ClassNotFoundException {
+
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         Student student = session.get(Student.class, id);
@@ -53,11 +58,11 @@ public class StudentDAOImpl implements StudentDAO {
         transaction.commit();
         session.close();
         return true;
-
     }
 
     @Override
     public Student search(String id) throws SQLException, ClassNotFoundException {
+
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         Student student = session.get(Student.class, id);
@@ -67,19 +72,17 @@ public class StudentDAOImpl implements StudentDAO {
     }
 
     @Override
-    public boolean exist(String id) throws SQLException, ClassNotFoundException{
+    public boolean exist(String id) throws SQLException, ClassNotFoundException {
+
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         Query query = session.createQuery("SELECT student_id FROM Student WHERE student_id=:id");
         String id1 = (String) query.setParameter("id", id).uniqueResult();
-        if (id1 != null){
+        if (id1 != null) {
             return true;
-
         }
         transaction.commit();
         session.close();
         return false;
-
     }
-
 }

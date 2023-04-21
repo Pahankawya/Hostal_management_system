@@ -1,4 +1,5 @@
-package lk.ijse.hostelManagementSystem.bo.custom.Impl;
+package lk.ijse.hostelManagementSystem.bo.custom.impl;
+
 
 import lk.ijse.hostelManagementSystem.bo.custom.ReserveBO;
 import lk.ijse.hostelManagementSystem.dao.DAOFactory;
@@ -19,6 +20,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class ReserveBOImpl implements ReserveBO {
+
     private final ReserveDAO reserveDAO = (ReserveDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.RESERVE);
     private final StudentDAO studentDAO = (StudentDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.STUDENT);
     private final RoomDAO roomDAO = (RoomDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.ROOM);
@@ -42,7 +44,8 @@ public class ReserveBOImpl implements ReserveBO {
     }
 
     @Override
-public boolean updateReserve(ReservationDTO dto) throws SQLException, ClassNotFoundException {
+    public boolean updateReserve(ReservationDTO dto) throws SQLException, ClassNotFoundException {
+
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         Student student = session.get(Student.class, dto.getStudent_id());
@@ -53,34 +56,32 @@ public boolean updateReserve(ReservationDTO dto) throws SQLException, ClassNotFo
         transaction.commit();
         session.close();
         return true;
-
     }
 
     @Override
-public boolean deleteReserve(String id) throws SQLException, ClassNotFoundException{
+    public boolean deleteReserve(String id) throws SQLException, ClassNotFoundException {
         return reserveDAO.delete(id);
 
     }
+
     @Override
-    public String generateNewId()throws SQLException, ClassNotFoundException{
+    public String generateNewId() throws SQLException, ClassNotFoundException {
         return reserveDAO.generateNewId();
-
     }
 
     @Override
-    public boolean existReserveID(String id)throws SQLException, ClassNotFoundException{
+    public boolean existReserveID(String id) throws SQLException, ClassNotFoundException {
         return reserveDAO.exist(id);
-
     }
 
     @Override
-    public boolean existStudent(String id) throws SQLException, ClassNotFoundException{
+    public boolean existStudent(String id) throws SQLException, ClassNotFoundException {
         return reserveDAO.existStudent(id);
-
     }
 
     @Override
-    public boolean PurchaseRoom(ReservationDTO dto) throws SQLException, ClassNotFoundException{
+    public boolean PurchaseRoom(ReservationDTO dto) throws SQLException, ClassNotFoundException {
+
 
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();

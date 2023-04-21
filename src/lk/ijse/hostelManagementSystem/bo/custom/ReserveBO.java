@@ -1,5 +1,6 @@
 package lk.ijse.hostelManagementSystem.bo.custom;
 
+
 import lk.ijse.hostelManagementSystem.bo.SuperBO;
 import lk.ijse.hostelManagementSystem.dto.ReservationDTO;
 import lk.ijse.hostelManagementSystem.dto.RoomDTO;
@@ -9,6 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public interface ReserveBO extends SuperBO {
+
     ArrayList<ReservationDTO> getAllReserve() throws SQLException, ClassNotFoundException;
 
     ArrayList<ReservationDTO> getAllReserveSearch(String id) throws SQLException, ClassNotFoundException;
@@ -40,5 +42,3 @@ public interface ReserveBO extends SuperBO {
     ArrayList<RoomDTO> getAllRooms() throws SQLException, ClassNotFoundException;
 
 }
-
-

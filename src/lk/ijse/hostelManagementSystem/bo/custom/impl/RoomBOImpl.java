@@ -1,4 +1,5 @@
-package lk.ijse.hostelManagementSystem.bo.custom.Impl;
+package lk.ijse.hostelManagementSystem.bo.custom.impl;
+
 
 import lk.ijse.hostelManagementSystem.bo.custom.RoomBO;
 import lk.ijse.hostelManagementSystem.dao.DAOFactory;
@@ -10,10 +11,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class RoomBOImpl implements RoomBO {
+
     private final RoomDAO roomDAO = (RoomDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.ROOM);
 
     @Override
-    public ArrayList<RoomDTO> getAllRooms() throws SQLException, ClassNotFoundException{
+    public ArrayList<RoomDTO> getAllRooms() throws SQLException, ClassNotFoundException {
         ArrayList<Room> all = roomDAO.getAll();
         ArrayList<RoomDTO> allRoom = new ArrayList<>();
         for (Room room : all) {

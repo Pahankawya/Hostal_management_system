@@ -1,5 +1,6 @@
 package lk.ijse.hostelManagementSystem.bo.custom;
 
+
 import lk.ijse.hostelManagementSystem.bo.SuperBO;
 import lk.ijse.hostelManagementSystem.dto.LoginDTO;
 
@@ -19,5 +20,4 @@ public interface UserBO extends SuperBO {
     boolean deleteUser(String id) throws SQLException, ClassNotFoundException;
 
     boolean existUser(String id) throws SQLException, ClassNotFoundException;
-
 }
