@@ -7,20 +7,14 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="MainAnchorPane" prefHeight="692.0" prefWidth="796.0" style="-fx-background-color: #02030a;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.controller.ReservationFormController">
     <children>
-        <JFXButton fx:id="btnStudent" buttonType="RAISED" layoutX="425.0" layoutY="582.0" onAction="#btnStudentOnAction" prefHeight="54.0" prefWidth="169.0" stylesheets="@assests/style/style.css" text="Add Student">
-         <font>
-            <Font size="24.0" />
-         </font></JFXButton>
         <JFXButton fx:id="btnReserve" buttonType="RAISED" layoutX="611.0" layoutY="582.0" onAction="#btnReserveOnAction" prefHeight="54.0" prefWidth="157.0" stylesheets="@assests/style/style.css" text="Reserve">
          <font>
             <Font size="24.0" />
          </font></JFXButton>
-        <VBox layoutX="50.0" layoutY="117.0" prefHeight="44.0" prefWidth="135.0" stylesheets="@assests/style/style.css" />
         <Label layoutX="262.0" layoutY="32.0" prefHeight="54.0" prefWidth="373.0" text="Manage Reservation" textFill="#e7e5e5">
             <font>
                 <Font name="Baskerville Old Face" size="45.0" />
@@ -35,37 +29,37 @@
                   <Font name="Baskerville Old Face" size="18.0" />
               </font>
           </Label>
-      <JFXTextField fx:id="txtStudentName" focusColor="#dad3d3" labelFloat="true" layoutX="286.0" layoutY="185.0" styleClass="button3" stylesheets="@assests/style/style.css" text="Student Name" unFocusColor="#252020">
+      <JFXTextField fx:id="txtStudentName" focusColor="#dad3d3" labelFloat="true" layoutX="286.0" layoutY="185.0" promptText="Student Name:" styleClass="button3" stylesheets="@assests/style/style.css" unFocusColor="#252020">
          <font>
             <Font name="Baskerville Old Face" size="18.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtContactNo" focusColor="#dad3d3" labelFloat="true" layoutX="541.0" layoutY="185.0" styleClass="button3" stylesheets="@assests/style/style.css" text="Contact" unFocusColor="#252020">
+      <JFXTextField fx:id="txtContactNo" focusColor="#dad3d3" labelFloat="true" layoutX="541.0" layoutY="185.0" promptText="Contact" styleClass="button3" stylesheets="@assests/style/style.css" unFocusColor="#252020">
          <font>
             <Font name="Baskerville Old Face" size="18.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtAddress" focusColor="#dad3d3" labelFloat="true" layoutX="20.0" layoutY="249.0" styleClass="button3" stylesheets="@assests/style/style.css" text="Address" unFocusColor="#252020">
+      <JFXTextField fx:id="txtAddress" focusColor="#dad3d3" labelFloat="true" layoutX="20.0" layoutY="249.0" promptText="Address" styleClass="button3" stylesheets="@assests/style/style.css" unFocusColor="#252020">
          <font>
             <Font name="Baskerville Old Face" size="18.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtDOB" focusColor="#dad3d3" labelFloat="true" layoutX="283.0" layoutY="249.0" styleClass="button3" stylesheets="@assests/style/style.css" text="DOB" unFocusColor="#252020">
+      <JFXTextField fx:id="txtDOB" focusColor="#dad3d3" labelFloat="true" layoutX="283.0" layoutY="249.0" promptText="DOB" styleClass="button3" stylesheets="@assests/style/style.css" unFocusColor="#252020">
          <font>
             <Font name="Baskerville Old Face" size="18.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtGender" focusColor="#dad3d3" labelFloat="true" layoutX="541.0" layoutY="249.0" styleClass="button3" stylesheets="@assests/style/style.css" text="Gender" unFocusColor="#252020">
+      <JFXTextField fx:id="txtGender" focusColor="#dad3d3" labelFloat="true" layoutX="541.0" layoutY="249.0" promptText="Gender" styleClass="button3" stylesheets="@assests/style/style.css" unFocusColor="#252020">
          <font>
             <Font name="Baskerville Old Face" size="18.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtRoomType" focusColor="#dad3d3" labelFloat="true" layoutX="283.0" layoutY="345.0" styleClass="button3" stylesheets="@assests/style/style.css" text="Room Type" unFocusColor="#252020">
+      <JFXTextField fx:id="txtRoomType" focusColor="#dad3d3" labelFloat="true" layoutX="283.0" layoutY="345.0" promptText="Room Type" styleClass="button3" stylesheets="@assests/style/style.css" unFocusColor="#252020">
          <font>
             <Font name="Baskerville Old Face" size="18.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtMonthlyRent" focusColor="#dad3d3" labelFloat="true" layoutX="533.0" layoutY="345.0" styleClass="button3" stylesheets="@assests/style/style.css" text="Key Money" unFocusColor="#252020">
+      <JFXTextField fx:id="txtMonthlyRent" focusColor="#dad3d3" labelFloat="true" layoutX="533.0" layoutY="345.0" promptText="Key Money" styleClass="button3" stylesheets="@assests/style/style.css" unFocusColor="#252020">
          <font>
             <Font name="Baskerville Old Face" size="18.0" />
          </font>
@@ -76,16 +70,22 @@
             <Font name="Baskerville Old Face" size="18.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtQty" focusColor="#dad3d3" labelFloat="true" layoutX="26.0" layoutY="428.0" styleClass="button3" stylesheets="@assests/style/style.css" text="QTY" unFocusColor="#252020">
+      <JFXTextField fx:id="txtQty" focusColor="#dad3d3" labelFloat="true" layoutX="26.0" layoutY="428.0" promptText="QTY" styleClass="button3" stylesheets="@assests/style/style.css" unFocusColor="#252020">
          <font>
             <Font name="Baskerville Old Face" size="18.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtKeyMoney" focusColor="#dad3d3" labelFloat="true" layoutX="283.0" layoutY="428.0" styleClass="button3" stylesheets="@assests/style/style.css" text="Advance" unFocusColor="#252020">
+      <JFXTextField fx:id="txtKeyMoney" focusColor="#dad3d3" labelFloat="true" layoutX="283.0" layoutY="428.0" promptText="Advance" styleClass="button3" stylesheets="@assests/style/style.css" unFocusColor="#252020">
          <font>
             <Font name="Baskerville Old Face" size="18.0" />
          </font>
       </JFXTextField>
       <Separator layoutX="-1.0" layoutY="326.0" prefHeight="4.0" prefWidth="808.0" />
+      <Label fx:id="llbResId" layoutX="35.0" layoutY="129.0" prefHeight="31.0" prefWidth="231.0" textFill="#fc9300" />
+      <JFXButton fx:id="btnStudent" buttonType="RAISED" layoutX="416.0" layoutY="582.0" onAction="#btnStudentOnAction" prefHeight="54.0" prefWidth="173.0" stylesheets="@assests/style/style.css" text="Add Student">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
     </children>
 </AnchorPane>

@@ -34,8 +34,13 @@ public class Navigation {
                 window.setTitle("Category Form");
                 initUI("categoryUpdate.fxml");
                 break;
+            case RESERVATION:
+                window.setTitle("Category Form");
+                initUI("ReservationForm.fxml");
+                break;
             default:
                 new Alert(Alert.AlertType.ERROR, "Not suitable UI found!").show();
+
 
         }
     }

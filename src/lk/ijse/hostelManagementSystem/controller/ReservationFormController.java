@@ -1,11 +1,15 @@
 package lk.ijse.hostelManagementSystem.controller;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import lk.ijse.hostelManagementSystem.bo.BOFactory;
 import lk.ijse.hostelManagementSystem.bo.custom.ReserveBO;
@@ -23,26 +27,54 @@ import java.util.ResourceBundle;
 
 public class ReservationFormController implements Initializable {
 
-    public JFXTextField txtAddress;
-    public JFXTextField txtDOB;
-    public JFXTextField txtGender;
-    public JFXTextField txtContactNo;
-    public JFXTextField txtStudentName;
-    public JFXComboBox<String> cmbStudentId;
-    public Label llbResId;
-    public JFXTextField txtQty;
-    public JFXTextField txtKeyMoney;
-    public JFXTextField txtMonthlyRent;
-    public JFXTextField txtRoomType;
-    public JFXComboBox<String> cmbRoomId;
-    public Button btnStudent;
-    public Button btnReserve;
-    public AnchorPane MainAnchorPane;
+    @FXML
+    private JFXButton btnStudent;
+
+    @FXML
+    private AnchorPane MainAnchorPane;
+
+    @FXML
+    private JFXButton btnReserve;
+
+    @FXML
+    private JFXComboBox<String> cmbStudentId;
+
+    @FXML
+    private JFXTextField txtStudentName;
+
+    @FXML
+    private JFXTextField txtContactNo;
+
+    @FXML
+    private JFXTextField txtAddress;
+
+    @FXML
+    private JFXTextField txtDOB;
+
+    @FXML
+    private JFXTextField txtGender;
+
+    @FXML
+    private JFXTextField txtRoomType;
+
+    @FXML
+    private JFXTextField txtMonthlyRent;
+
+    @FXML
+    private JFXComboBox<String> cmbRoomId;
+
+    @FXML
+    private JFXTextField txtQty;
+
+    @FXML
+    private JFXTextField txtKeyMoney;
+
+    @FXML
+    private Label llbResId;
 
     private String RegID;
 
     private final ReserveBO purchaseRoomBO = (ReserveBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.RESERVE);
-
 
 
     public void btnReserveOnAction(ActionEvent actionEvent) {
@@ -94,6 +126,15 @@ public class ReservationFormController implements Initializable {
             throwables.printStackTrace();
         }
         return false;
+    }
+    @FXML
+    void btnStudentOnAction(ActionEvent event) throws IOException {
+        setUi("/lk/ijse/hostelManagementSystem/view/ManageStudentForm");
+    }
+    private void setUi(String ui) throws IOException {
+        Parent load = FXMLLoader.load(getClass().getResource(ui + ".fxml"));
+        MainAnchorPane.getChildren().clear();
+        MainAnchorPane.getChildren().add(load);
     }
 
     @Override

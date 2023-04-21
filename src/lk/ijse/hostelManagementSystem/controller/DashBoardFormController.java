@@ -28,12 +28,16 @@ public class DashBoardFormController {
         private JFXButton btnKeymoney;
 
         @FXML
+        private JFXButton btnReservation;
+
+        @FXML
         private AnchorPane pane;
 
         boolean StudentManagement = true;
         boolean RoomManagement = true;
         boolean keyMoney = true;
         boolean UserManagement = true;
+        boolean ReservationManagement = true;
 
         @FXML
         void btnGo1OnAction(ActionEvent event) throws IOException {
@@ -70,11 +74,6 @@ public class DashBoardFormController {
                 }
                 keyMoney = true;
         }
-
-
-
-
-
 
         @FXML
         void btngo8OnAction(ActionEvent event) throws IOException {
@@ -119,6 +118,18 @@ public class DashBoardFormController {
                 keyMoney = true;
                 btnUser.setStyle("-fx-background-color: #05071F");
                 UserManagement = true;
+                btnReservation.setStyle("-fx-background-color: #05071F");
+                ReservationManagement = true;
+        }
+
+        public void btnGo4OnAction(ActionEvent actionEvent) throws IOException {
+                setUi("/lk/ijse/hostelManagementSystem/view/ReservationForm");
+                loadCL();
+                if (ReservationManagement) {
+                        btnReservation.setStyle("-fx-background-color: #1620A1");
+                        ReservationManagement = false;
+                }
+                ReservationManagement = true;
 
         }
 }
