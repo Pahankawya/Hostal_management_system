@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="MainAnchorPane" prefHeight="692.0" prefWidth="799.0" style="-fx-background-color: #02030a;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.controller.FindKeyMoneyFormController">
+    <children>
+        <TableView fx:id="tblRemain" layoutX="22.0" layoutY="280.0" prefHeight="375.0" prefWidth="753.0" style="-fx-background-color: #05071F;" styleClass="button" stylesheets="@assests/style/style.css">
+            <columns>
+                <TableColumn prefWidth="101.0" text="Reserve ID" />
+                <TableColumn prefWidth="118.0" text="Student ID" />
+                <TableColumn prefWidth="109.0" text="Room ID" />
+                <TableColumn prefWidth="104.0" text="Date" />
+                <TableColumn prefWidth="128.0" text="Key Money" />
+            <TableColumn prefWidth="112.0" text="Advanced" />
+            <TableColumn text="Status" />
+            </columns>
+        </TableView>
+        <Label layoutX="286.0" layoutY="34.0" prefHeight="54.0" prefWidth="308.0" text="Find Key-Money" textFill="#e7e5e5">
+            <font>
+                <Font name="Baskerville Old Face" size="45.0" />
+            </font>
+            <effect>
+                <Glow level="0.41" />
+            </effect>
+        </Label>
+      <JFXTextField fx:id="txtSearch" focusColor="#fc9300" labelFloat="true" layoutX="523.0" layoutY="165.0" onAction="#txtSearchOnAction" prefHeight="31.0" prefWidth="231.0" promptText="Search:" unFocusColor="#fc9300">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+    </children>
+</AnchorPane>
