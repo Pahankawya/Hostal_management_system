@@ -12,8 +12,6 @@ import org.hibernate.cfg.Configuration;
 
 
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 
 import java.io.IOException;
 import java.util.Properties;
@@ -24,13 +22,6 @@ public class FactoryConfiguration {
     private final SessionFactory sessionFactory;
 
     private FactoryConfiguration() {
-
-//        StandardServiceRegistry buildRegistry = new StandardServiceRegistryBuilder()
-//                .loadProperties("hibernate.properties")
-//                .configure().build();
-//        sessionFactory = new MetadataSources(buildRegistry)
-//                .getMetadataBuilder().build()
-//                .getSessionFactoryBuilder().build();
 
         sessionFactory = new Configuration()
                 .mergeProperties(getProperties())

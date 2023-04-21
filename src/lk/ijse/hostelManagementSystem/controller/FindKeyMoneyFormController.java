@@ -4,10 +4,8 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import lk.ijse.hostelManagementSystem.bo.BOFactory;
 import lk.ijse.hostelManagementSystem.bo.custom.ReserveBO;
@@ -15,17 +13,16 @@ import lk.ijse.hostelManagementSystem.dto.ReservationDTO;
 import lk.ijse.hostelManagementSystem.util.NotificationController;
 import lk.ijse.hostelManagementSystem.view.TM.ReservationTM;
 
-import java.io.IOException;
+
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class FindKeyMoneyFormController implements Initializable {
-
     public AnchorPane MainAnchorPane;
     public JFXTextField txtSearch;
-    public TableView<ReservationTM> tblRemain;
+    public TableView <ReservationTM>tblRemain;
 
     private final ReserveBO reserveBO = (ReserveBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.RESERVE);
 

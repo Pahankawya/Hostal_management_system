@@ -16,9 +16,9 @@
         <JFXTextField fx:id="txtName" layoutX="221.0" layoutY="168.0" promptText="Type here!" styleClass="button3" stylesheets="@assests/style/style.css" unFocusColor="#e7e5e5" />
         <JFXTextField fx:id="txtAddress" layoutX="221.0" layoutY="217.0" promptText="Type here!" styleClass="button3" stylesheets="@assests/style/style.css" unFocusColor="#e7e5e5" />
         <JFXTextField fx:id="txtContactNo" layoutX="221.0" layoutY="270.0" promptText="Type here!" styleClass="button3" stylesheets="@assests/style/style.css" unFocusColor="#e7e5e5" />
-        <JFXButton fx:id="btnAddonactionId" buttonType="RAISED" layoutX="607.0" layoutY="229.0" onAction="#btnAddOnAction" prefHeight="31.0" prefWidth="125.0" stylesheets="@assests/style/style.css" text="ADD NEW" />
-        <JFXButton buttonType="RAISED" layoutX="607.0" layoutY="282.0" onAction="#btnUpdateOnAction" prefHeight="31.0" prefWidth="125.0" stylesheets="@assests/style/style.css" text="SAVE" />
-        <JFXButton buttonType="RAISED" layoutX="607.0" layoutY="331.0" onAction="#btnDeleteOnAction" prefHeight="31.0" prefWidth="125.0" styleClass="button1" stylesheets="@assests/style/style.css" text="DELETE" />
+        <JFXButton fx:id="btnAddNew" buttonType="RAISED" layoutX="607.0" layoutY="229.0" onAction="#btnAddNew_OnAction" prefHeight="31.0" prefWidth="125.0" stylesheets="@assests/style/style.css" text="ADD NEW" />
+        <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="607.0" layoutY="282.0" onAction="#btnSave_OnAction" prefHeight="31.0" prefWidth="125.0" stylesheets="@assests/style/style.css" text="SAVE" />
+        <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="607.0" layoutY="331.0" onAction="#btnDelete_OnAction" prefHeight="31.0" prefWidth="125.0" styleClass="button1" stylesheets="@assests/style/style.css" text="DELETE" />
         <JFXTextField fx:id="txtId" layoutX="221.0" layoutY="126.0" promptText="Type here!" styleClass="button3" stylesheets="@assests/style/style.css" unFocusColor="#e7e5e5" />
         <JFXTextField fx:id="txtPassword" layoutX="221.0" layoutY="324.0" promptText="Type here!" styleClass="button3" stylesheets="@assests/style/style.css" unFocusColor="#e7e5e5" />
         <VBox layoutX="50.0" layoutY="117.0" prefHeight="297.0" prefWidth="135.0" stylesheets="@assests/style/style.css">

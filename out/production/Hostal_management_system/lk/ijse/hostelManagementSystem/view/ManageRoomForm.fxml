@@ -5,10 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Glow?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -22,17 +19,6 @@
         <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="607.0" layoutY="282.0" onAction="#btnSave_OnAction" prefHeight="31.0" prefWidth="125.0" stylesheets="@assests/style/style.css" text="UPDATE" />
         <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="607.0" layoutY="331.0" onAction="#btnDelete_OnAction" prefHeight="31.0" prefWidth="125.0" styleClass="button1" stylesheets="@assests/style/style.css" text="DELETE" />
         <JFXTextField fx:id="txtRoomId" layoutX="221.0" layoutY="126.0" promptText="Id here!" styleClass="button3" stylesheets="@assests/style/style.css" unFocusColor="#e7e5e5" />
-        <JFXButton fx:id="btnsearch" buttonType="RAISED" layoutX="706.0" layoutY="149.0" onAction="#btnSearchOnAction" prefHeight="31.0" prefWidth="1.0" stylesheets="@assests/style/style.css" text="search">
-            <font>
-                <Font size="1.0" />
-            </font>
-            <graphic>
-                <ImageView fitHeight="26.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@assests/images/OIP-removebg-preview.png" />
-                    </image>
-                </ImageView>
-            </graphic></JFXButton>
         <VBox layoutX="50.0" layoutY="117.0" prefHeight="297.0" prefWidth="135.0" stylesheets="@assests/style/style.css">
             <children>
                 <Label prefHeight="49.0" prefWidth="134.0" text="Room Id:" textFill="#e7e5e5">
@@ -64,7 +50,6 @@
                 <TableColumn prefWidth="206.0" text="QTY" />
             </columns>
         </TableView>
-        <TextField fx:id="txtSearch" layoutX="514.0" layoutY="149.0" onAction="#txtSearchOnAction" promptText="Search ID here!" />
         <Label layoutX="281.0" layoutY="33.0" prefHeight="54.0" prefWidth="308.0" text="Manage Rooms" textFill="#e7e5e5">
             <font>
                 <Font name="Baskerville Old Face" size="45.0" />
@@ -73,5 +58,10 @@
                 <Glow level="0.41" />
             </effect>
         </Label>
+      <JFXTextField fx:id="txtSearch" focusColor="#fc9300" labelFloat="true" layoutX="453.0" layoutY="119.0" onAction="#txtSearchOnAction" prefHeight="39.0" prefWidth="273.0" unFocusColor="#fc9300">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXTextField>
     </children>
 </AnchorPane>
