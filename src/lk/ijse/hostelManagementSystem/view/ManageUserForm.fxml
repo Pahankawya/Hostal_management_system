@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pane" prefHeight="692.0" prefWidth="799.0" style="-fx-background-color: #02030a;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.controller.ManageStudentFormController">
+<AnchorPane fx:id="UserPane" prefHeight="692.0" prefWidth="799.0" style="-fx-background-color: #02030a;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.controller.ManageUserFormController">
     <children>
         <JFXTextField fx:id="txtName" layoutX="221.0" layoutY="168.0" promptText="Type here!" styleClass="button3" stylesheets="@assests/style/style.css" unFocusColor="#e7e5e5" />
         <JFXTextField fx:id="txtAddress" layoutX="221.0" layoutY="217.0" promptText="Type here!" styleClass="button3" stylesheets="@assests/style/style.css" unFocusColor="#e7e5e5" />
