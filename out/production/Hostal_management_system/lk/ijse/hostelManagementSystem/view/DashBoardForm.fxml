@@ -22,8 +22,8 @@
         </Label>
         <VBox prefHeight="695.0" prefWidth="314.0" style="-fx-background-color: #05071F;">
             <children>
-                <ImageView fitHeight="141.0" fitWidth="314.0" pickOnBounds="true" preserveRatio="true" />
-                <JFXButton fx:id="btnUser" alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="10.0" onAction="#btngo8OnAction" prefHeight="94.0" prefWidth="314.0" stylesheets="@../assests/style/style.css" text="   User">
+                <ImageView fitHeight="116.0" fitWidth="314.0" pickOnBounds="true" preserveRatio="true" />
+                <JFXButton fx:id="btnUser" alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="10.0" onAction="#btngo8OnAction" prefHeight="94.0" prefWidth="314.0" stylesheets="assests/style/style.css" text="   User">
                     <graphic>
                         <ImageView fitHeight="25.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -38,7 +38,7 @@
                   <Font size="16.0" />
                </font>
                 </JFXButton>
-                <JFXButton fx:id="btnStudent" alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="10.0" onAction="#btnGo1OnAction" prefHeight="94.0" prefWidth="314.0" stylesheets="@../assests/style/style.css" text="    Student         ">
+                <JFXButton fx:id="btnStudent" alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="10.0" onAction="#btnGo1OnAction" prefHeight="94.0" prefWidth="314.0" stylesheets="assests/style/style.css" text="    Student         ">
                     <graphic>
                         <ImageView fitHeight="25.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -53,7 +53,7 @@
                   <Font size="16.0" />
                </font>
                 </JFXButton>
-                <JFXButton fx:id="btnRooms" alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="10.0" onAction="#btnGo3OnAction" prefHeight="94.0" prefWidth="314.0" stylesheets="@../assests/style/style.css" text="    Rooms">
+                <JFXButton fx:id="btnRooms" alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="10.0" onAction="#btnGo3OnAction" prefHeight="94.0" prefWidth="314.0" stylesheets="assests/style/style.css" text="    Rooms">
                     <graphic>
                         <ImageView fitHeight="25.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -68,7 +68,22 @@
                   <Font size="16.0" />
                </font>
                 </JFXButton>
-                <JFXButton fx:id="btnKeymoney" alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="10.0" onAction="#btnGo5OnAction" prefHeight="94.0" prefWidth="314.0" stylesheets="@../assests/style/style.css" text="    Key-Money">
+            <JFXButton fx:id="btnReservation" alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="10.0" layoutX="10.0" layoutY="339.0" onAction="#btnGo4OnAction" prefHeight="94.0" prefWidth="314.0" stylesheets="assests/style/style.css" text="    Reservation">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assests/images/icons8_Box_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+                <JFXButton fx:id="btnKeymoney" alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="10.0" onAction="#btnGo5OnAction" prefHeight="94.0" prefWidth="314.0" stylesheets="assests/style/style.css" text="    Key-Money">
                     <graphic>
                         <ImageView fitHeight="25.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -83,7 +98,7 @@
                   <Font size="16.0" />
                </font>
                 </JFXButton>
-                <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="10.0" onAction="#goBackOnAction" prefHeight="94.0" prefWidth="314.0" stylesheets="@../assests/style/style.css" text="Sign out">
+                <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="10.0" onAction="#goBackOnAction" prefHeight="94.0" prefWidth="314.0" stylesheets="assests/style/style.css" text="Sign out">
                     <graphic>
                         <ImageView fitHeight="25.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -100,6 +115,13 @@
                 </JFXButton>
             </children>
         </VBox>
-        <AnchorPane fx:id="pane" layoutX="314.0" layoutY="-1.0" prefHeight="692.0" prefWidth="799.0" />
+        <AnchorPane fx:id="pane" layoutX="314.0" layoutY="-1.0" prefHeight="692.0" prefWidth="799.0">
+         <children>
+            <ImageView fitHeight="423.0" fitWidth="788.0" layoutX="6.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assests/images/header-hide-in.jpg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
     </children>
 </AnchorPane>

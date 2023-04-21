@@ -6,29 +6,27 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainAdmin2" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.controller.UserLoginFormController">
+<AnchorPane fx:id="mainAdmin2" prefHeight="400.0" prefWidth="526.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.controller.UserLoginFormController">
     <children>
         <Pane opacity="0.86" prefHeight="400.0" prefWidth="253.0" style="-fx-background-color: #1B4E5E;">
             <children>
-                <Label layoutX="14.0" layoutY="48.0" text="User Name" textFill="WHITE">
+                <Label layoutX="14.0" layoutY="48.0" textFill="WHITE">
                     <font>
                         <Font name="HoloLens MDL2 Assets" size="21.0" />
                     </font>
                 </Label>
-                <Label layoutX="14.0" layoutY="140.0" text="Password" textFill="WHITE">
-                    <font>
-                        <Font name="HoloLens MDL2 Assets" size="21.0" />
-                    </font>
-                </Label>
-                <TextField layoutX="14.0" layoutY="81.0" prefHeight="37.0" prefWidth="172.0" style="-fx-background-radius: 30;">
+                <TextField fx:id="UserName_Id" layoutX="14.0" layoutY="81.0" prefHeight="37.0" prefWidth="172.0" style="-fx-background-radius: 30;">
                     <font>
                         <Font size="18.0" />
                     </font></TextField>
-                <PasswordField fx:id="passwordHidden" layoutX="14.0" layoutY="170.0" prefHeight="37.0" prefWidth="172.0" style="-fx-background-radius: 30;">
+                <PasswordField fx:id="Pasword_Id" layoutX="14.0" layoutY="170.0" onAction="#passwordOnAction" prefHeight="37.0" prefWidth="172.0" style="-fx-background-radius: 30;">
                     <font>
                         <Font size="15.0" />
                     </font>
@@ -39,7 +37,7 @@
                     </font>
                 </TextField>
                 <CheckBox fx:id="checkBox" layoutX="38.0" layoutY="215.0" mnemonicParsing="false" onAction="#changeVisibility" text="Show Password" textFill="#a89b9b" />
-                <Button fx:id="btnlogin" layoutX="58.0" layoutY="242.0" mnemonicParsing="false" onAction="#gofoward1" prefHeight="44.0" prefWidth="133.0" style="-fx-background-radius: 15; -fx-background-color: #132550;" text="Login" textFill="#c9baba">
+                <Button fx:id="btnlogin" layoutX="60.0" layoutY="273.0" mnemonicParsing="false" onAction="#LoggingOnAction" prefHeight="44.0" prefWidth="133.0" style="-fx-background-radius: 15; -fx-background-color: #132550;" text="Login" textFill="#c9baba">
                     <font>
                         <Font name="Arial" size="21.0" />
                     </font>
@@ -47,7 +45,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Button>
-                <Button fx:id="btnback" layoutX="83.0" layoutY="306.0" mnemonicParsing="false" onAction="#goBack" prefHeight="37.0" prefWidth="88.0" style="-fx-background-radius: 15; -fx-background-color: #000000;" text="Close" textFill="#cdbcbc">
+                <Button fx:id="btnback" layoutX="83.0" layoutY="331.0" mnemonicParsing="false" onAction="#goBack" prefHeight="37.0" prefWidth="88.0" style="-fx-background-radius: 15; -fx-background-color: #000000;" text="Close" textFill="#cdbcbc">
                     <font>
                         <Font size="15.0" />
                     </font>
@@ -55,7 +53,33 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Button>
+            <Label layoutX="21.0" layoutY="50.0" text="Username">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow height="0.0" radius="0.0" width="0.0" />
+               </effect>
+            </Label>
+            <Label layoutX="22.0" layoutY="143.0" text="Password">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow height="0.0" radius="0.0" width="0.0" />
+               </effect>
+            </Label>
+            <Label fx:id="warningmsgLbl" layoutX="7.0" layoutY="241.0" prefHeight="21.0" prefWidth="240.0" text="                             " textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
             </children>
         </Pane>
+      <ImageView fitHeight="400.0" fitWidth="503.0" layoutX="253.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/images/577c21885430ff8fbd4e78c3faf91d03.jpg" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>

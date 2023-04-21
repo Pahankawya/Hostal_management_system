@@ -15,7 +15,7 @@ public class Appinitializer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/lk/ijse/hostelManagementSystem/view/DashBoardForm.fxml"))));
+        primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/lk/ijse/hostelManagementSystem/view/UserLoginForm.fxml"))));
                 primaryStage.setTitle("Hostel Management System");
                 primaryStage.show();
 
