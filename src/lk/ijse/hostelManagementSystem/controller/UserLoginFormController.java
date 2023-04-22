@@ -76,13 +76,14 @@ public class UserLoginFormController {
     void LoggingOnAction(ActionEvent event) throws IOException, SQLException, ClassNotFoundException {
 
 
-            NotificationController.LoginUnSuccessfulNotification("admin");
             ArrayList<LoginDTO> loginDTOS = userBO.getAllUsers();
             attempts++;
             loginDTOS.forEach(e -> {
                 if (attempts <= 3) {
                     if (e.getUserID().equals(UserName_Id.getText()) && e.getPassword().equals(Pasword_Id.getText())) {
                         try {
+                            NotificationController.LoginSuccessfulNotification("admin");
+
                             Stage stage = (Stage) mainAdmin2.getScene().getWindow();
                             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/lk/ijse/hostelManagementSystem/view/DashBoardForm.fxml"))));
                             stage.centerOnScreen();
